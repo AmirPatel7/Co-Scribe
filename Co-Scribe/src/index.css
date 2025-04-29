@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Blinking Cursor */
+.blinking-cursor {
+    font-weight: 100; 
+    font-size: 64px;  
+    color: #F4EFE6;     
+    width: 4px;       
+    display: inline-block; 
+    animation: blink 1s step-end infinite;
+}
+
+.blinking-cursor-dashboard {
+    font-weight: 100; 
+    font-size: 32px;  
+    color: #F4EFE6;     
+    width: 4px;       
+    display: inline-block; 
+    animation: blink 1s step-end infinite;
+}
+
+.custom-simplemde .editor-toolbar {
+  background-color: #D3D3D3 !important;
+}
+
+.absolute.top-4.right-4 img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 2px solid #2F3E46; 
+}
+
+/* Full height for sidebar and main content */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #F4EFE6; /* Background color */
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.sidebar {
+  width: 250px; /* Fixed width */
+  background-color: #2D3B45; /* Sidebar color */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 1; /* Takes the remaining space */
+  padding: 20px;
+  background-color: #F4EFE6; /* Background matching sidebar */
+  overflow: auto; /* Handle overflow for main content */
+}
+
+.sidebar .menu-item {
+  padding: 10px 0;
+  color: white;
+}
+
+.sidebar .menu-item:hover {
+  background-color: #1C2A35;
+}
+
+.main-content .search-bar {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+.table-container {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Make the editor container and output full width on small screens */
+@media (max-width: 768px) {
+  .custom-simplemde {
+    width: 100%; /* Make the editor take full width */
+  }
+
+  .custom-simplemde .CodeMirror {
+    width: 100%; /* Ensure the CodeMirror editor is 100% wide */
+  }
+
+  .output-container {
+    width: 100%; /* Ensure the output container is also full width */
+  }
+
+  .project-editor-container {
+    flex-direction: column; /* Stack the editor and output vertically */
+    gap: 0; /* Remove gap on small screens */
+  }
+
+  .main-content {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .table-container {
+    padding: 10px; /* Adjust padding for small screens */
+    width: 100%; /* Ensure table takes the full width */
+  }
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.editor, .output {
+  width: 48%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .editor, .output {
+    width: 100%;
+  }
+}
+
+
+
+
+
